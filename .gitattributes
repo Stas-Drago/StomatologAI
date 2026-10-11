@@ -1,0 +1,2 @@
+# Large binary training artifacts and model weights are intentionally excluded
+# by .gitignore. Published documentation images use ordinary Git storage.

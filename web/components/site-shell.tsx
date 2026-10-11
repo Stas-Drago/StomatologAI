@@ -1,0 +1,7 @@
+"use client";
+import Link from "next/link";
+import { HeartPulse, Menu, ShieldCheck, X } from "lucide-react";
+import { useState } from "react";
+const navItems = [["/scan", "Проверка фото"], ["/clinics", "Клиники рядом"], ["/articles", "Рекомендации"]] as const;
+export function SiteHeader() { const [open, setOpen] = useState(false); return <header className="site-header"><Link className="brand" href="/"><span><HeartPulse size={19} /></span>DentalHelper</Link><nav aria-label="Основная навигация">{navItems.map(([href, label]) => <Link href={href} key={href}>{label}</Link>)}</nav><Link className="header-cta" href="/scan">Начать проверку</Link><button className="menu-button" onClick={() => setOpen(!open)} aria-label={open ? "Закрыть меню" : "Открыть меню"} aria-expanded={open}>{open ? <X size={21} /> : <Menu size={21} />}</button>{open && <nav className="mobile-nav" aria-label="Мобильная навигация">{navItems.map(([href, label]) => <Link href={href} key={href} onClick={() => setOpen(false)}>{label}</Link>)}<Link href="/scan" className="button button-primary" onClick={() => setOpen(false)}>Начать проверку</Link></nav>}</header>; }
+export function SiteFooter() { return <footer className="site-footer"><div className="brand"><span><HeartPulse size={19} /></span>DentalHelper</div><p><ShieldCheck size={15} /> Фото не сохраняются. Сервис не заменяет очную консультацию стоматолога.</p><Link href="/privacy">Обработка фото</Link></footer>; }

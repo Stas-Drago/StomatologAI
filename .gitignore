@@ -1,0 +1,58 @@
+# Виртуальные окружения Python
+.venv/
+.venv1/
+venv/
+env/
+
+# Кэш Python
+__pycache__/
+*.pyc
+
+# Кэш моделей и системный кэш
+.cache/
+agent/.cache/
+installed_model/
+
+# Модели машинного обучения (весят много)
+yolo_models/
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.bin
+
+# Датасеты (весят очень много, их не хранят в Git)
+Tooth_dataset/
+yolo_data/
+
+# Результаты обучения (папки runs от YOLO)
+runs/
+
+# Локальные артефакты и независимые эксперименты
+pet-project/
+web/node_modules/
+web/dist/
+web/.wrangler/
+.wrangler/
+*.db
+*.sqlite
+temp/
+tmp/
+
+# Логи
+*.log
+dental_analysis.log
+agent/dental_system.log
+
+# Файлы с секретами и токенами (ОЧЕНЬ ВАЖНО!)
+.env
+agent/.env
+
+# Настройки редакторов кода
+.vscode/
+.idea/
+
+# Временные и ненужные файлы
+.DS_Store
+get-pip.py
+pnggg/

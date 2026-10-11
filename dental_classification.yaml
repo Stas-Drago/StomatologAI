@@ -1,0 +1,18 @@
+# E:\DentBot\dental_classification.yaml
+path: E:/DentBot/yolo_data
+train: images/train
+val: images/val
+test: images/test
+
+# Классы (должны совпадать с CLASS_NAMES в скрипте)
+names:
+  0: Calculus
+  1: caries
+  2: hypodontia
+  3: Mouth Ulcer
+  4: Tooth Discoloration
+  5: healthy # Новый класс
+
+# Критично для классификации!
+rect: True
+multiscale: False

@@ -1,0 +1,3 @@
+import { ShieldCheck } from "lucide-react";
+import { SiteFooter, SiteHeader } from "@/components/site-shell";
+export default function PrivacyPage() { return <main><SiteHeader /><article className="legal-page"><p className="eyebrow"><ShieldCheck size={16} /> Обработка фотографии</p><h1>Фото остаётся только на время анализа</h1><p>Когда вы загружаете изображение, DentalHelper создаёт временный файл для работы алгоритма. После формирования ответа он удаляется автоматически.</p><p>Мы не создаём историю результатов, не используем фотографии для обучения моделей и не передаём их третьим лицам. Сервис даёт предварительную оценку и не заменяет очную диагностику у стоматолога.</p></article><SiteFooter /></main>; }
